@@ -21,7 +21,7 @@ namespace Chessington.GameEngine.Pieces
                     listOfPossiblePositions.Add(Square.At(currentSquare.Row-2, currentSquare.Col));
                 }
             }
-            if (Player == Player.Black)
+            else if (Player == Player.Black)
             {
                 listOfPossiblePositions.Add(Square.At(currentSquare.Row+1, currentSquare.Col));
                 if (currentSquare.Row == 1)

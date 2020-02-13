@@ -12,21 +12,38 @@ namespace Chessington.GameEngine.Pieces
         public override IEnumerable<Square> GetAvailableMoves(Board board)
         {
             var currentSquare = board.FindPiece(this);
+            
             List <Square> listOfPossiblePositions = new List<Square>(); 
             if (Player == Player.White)
             {
-                listOfPossiblePositions.Add(Square.At(currentSquare.Row-1, currentSquare.Col));
+                var possibleMove = Square.At(currentSquare.Row-1, currentSquare.Col);
+                if (board.GetPiece(possibleMove) == null)
+                {
+                    listOfPossiblePositions.Add(possibleMove);
+                }
                 if (currentSquare.Row == 6)
                 {
-                    listOfPossiblePositions.Add(Square.At(currentSquare.Row-2, currentSquare.Col));
+                    var possibleDoubleMove = Square.At(currentSquare.Row - 2, currentSquare.Col);
+                    if (board.GetPiece(possibleDoubleMove) == null && board.GetPiece(possibleMove) == null)
+                    {
+                        listOfPossiblePositions.Add(possibleDoubleMove);    
+                    }
                 }
             }
             if (Player == Player.Black)
             {
-                listOfPossiblePositions.Add(Square.At(currentSquare.Row+1, currentSquare.Col));
+                var possibleMove = Square.At(currentSquare.Row+1, currentSquare.Col);
+                if (board.GetPiece(possibleMove) == null)
+                {
+                    listOfPossiblePositions.Add(possibleMove);
+                }
                 if (currentSquare.Row == 1)
                 {
-                    listOfPossiblePositions.Add(Square.At(currentSquare.Row+2, currentSquare.Col));
+                    var possibleDoubleMove = Square.At(currentSquare.Row +2, currentSquare.Col);
+                    if (board.GetPiece(possibleDoubleMove) == null && board.GetPiece(possibleMove) == null)
+                    {
+                        listOfPossiblePositions.Add(possibleDoubleMove);    
+                    }
                 }
             }
 

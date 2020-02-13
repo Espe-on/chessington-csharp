@@ -30,7 +30,7 @@ namespace Chessington.GameEngine.Pieces
                     }
                 }
             }
-            if (Player == Player.Black)
+            else if (Player == Player.Black)
             {
                 var possibleMove = Square.At(currentSquare.Row+1, currentSquare.Col);
                 if (board.GetPiece(possibleMove) == null)

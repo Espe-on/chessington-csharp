@@ -20,7 +20,7 @@ namespace Chessington.GameEngine.Tests.Pieces
             _moveList = new List<Square>();
         }
         [Test]
-        public void Knight_CanMoveCorrectly() // RENAME
+        public void Knight_CanMoveCorrectly() //RENAME PLEASE KANWALJIT AS THIS NAME IS VERY BAD AND I CAN'T THINK OF A BETTER ONE - JOSEPH
         {
             _board.AddPiece(Square.At(3,3), _knight);
             IEnumerable<Square> moves = _knight.GetAvailableMoves(_board);

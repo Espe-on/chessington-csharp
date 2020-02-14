@@ -8,14 +8,14 @@ namespace Chessington.GameEngine.Tests.Pieces
     public class RookTests
     {
         private Board _board;
-        private Piece _Rook;
+        private Piece _rook;
         private List<Square> _moveList; 
 
         [SetUp]
         public void SetUp()
         {
             _board = new Board();
-            _Rook = new Rook(Player.Black);
+            _rook = new Rook(Player.Black);
             _moveList = new List<Square>();
         }
     }

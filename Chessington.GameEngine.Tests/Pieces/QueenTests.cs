@@ -8,14 +8,14 @@
      public class QueenTests
      {
          private Board _board;
-         private Piece _king;
+         private Piece _queen;
          private List<Square> _moveList; 
 
          [SetUp]
          public void SetUp()
          {
              _board = new Board();
-             _king = new King(Player.Black);
+             _queen = new Queen(Player.Black);
              _moveList = new List<Square>();
          }
      }

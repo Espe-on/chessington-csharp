@@ -8,14 +8,14 @@ namespace Chessington.GameEngine.Tests.Pieces
     public class KnightTests
     {
         private Board _board;
-        private Piece _king;
+        private Piece _knight;
         private List<Square> _moveList; 
 
         [SetUp]
         public void SetUp()
         {
             _board = new Board();
-            _king = new King(Player.Black);
+            _knight = new Knight(Player.White);
             _moveList = new List<Square>();
         }
     }

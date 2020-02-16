@@ -9,10 +9,21 @@ namespace Chessington.GameEngine.Pieces
         public Pawn(Player player) 
             : base(player) { }
 
+        private void NextRow ()
+        {
+            if (Player == Player.White)
+            {
+                
+            }
+            else if (Player == Player.Black)
+            {
+                
+            }
+        }
+        
         public override IEnumerable<Square> GetAvailableMoves(Board board)
         {
             var currentSquare = board.FindPiece(this);
-            
             List <Square> listOfPossiblePositions = new List<Square>(); 
             if (Player == Player.White)
             {

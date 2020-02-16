@@ -35,7 +35,8 @@ namespace Chessington.GameEngine.Pieces
                 if (currentSquare.Row == 6)
                 {
                     var possibleDoubleMove = Square.At(currentSquare.Row - 2, currentSquare.Col);
-                    if (board.GetPiece(possibleDoubleMove) == null && board.GetPiece(possibleMove) == null)
+                    if (board.GetPiece(possibleDoubleMove) == null 
+                        && board.GetPiece(possibleMove) == null)
                     {
                         listOfPossiblePositions.Add(possibleDoubleMove);    
                     }
@@ -51,7 +52,8 @@ namespace Chessington.GameEngine.Pieces
                 if (currentSquare.Row == 1)
                 {
                     var possibleDoubleMove = Square.At(currentSquare.Row +2, currentSquare.Col);
-                    if (board.GetPiece(possibleDoubleMove) == null && board.GetPiece(possibleMove) == null)
+                    if (board.GetPiece(possibleDoubleMove) == null 
+                        && board.GetPiece(possibleMove) == null)
                     {
                         listOfPossiblePositions.Add(possibleDoubleMove);    
                     }
